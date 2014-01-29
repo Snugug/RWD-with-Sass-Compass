@@ -396,14 +396,6 @@ $breakpoint-no-query-fallbacks: '.no-touch';
 					<h1>Fluid Grids</h1>
 				</section>
 
-				<section>
-					<section id="building-with-grids">
-						<h2>Building With Grids</h2>
-						<p>Grids provide order to your design and structure to your information.</p>
-						<p>The best grids are specific to your content and your design, as they are an extension of both.</p>
-					</section>
-				</section>
-
 				<section id="box-model" data-state="experiment">
 					<img src="images/boxmodel.png" alt="Box Model">
 				</section>
@@ -430,6 +422,15 @@ $breakpoint-no-query-fallbacks: '.no-touch';
 
 					<pre class="fragment"><code class="language-scss">@import 'singularitygs';</code></pre>
 				</section>
+
+				<section>
+					<section id="building-with-grids">
+						<h2>Building With Grids</h2>
+						<p>Grids provide order to your design and structure to your information.</p>
+						<p>The best grids are specific to your content and your design, as they are an extension of both.</p>
+					</section>
+				</section>
+
 				<section>
 					<section data-state="bootstrap" id="bootstrap-grid">
 						<h1>Twitter Bootstrap</h1>
@@ -450,20 +451,20 @@ $breakpoint-no-query-fallbacks: '.no-touch';
 					</section>
 					<section id="symmetric-grids-bootstrap">
 						<h2>Symmetric Grids - Twitter Bootstrap</h2>
-						@include add-grid(12);
+						<pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(1/3);</code></pre>
 						<img src="images/symmetric-grid-bootstrap.png" alt="Twitter Bootstrap Grid" class="fragment medium">
 					</section>
 					<section id="symmetric-grids-foundation">
 						<h2>Symmetric Grids - Zurb Foundation</h2>
-						@include add-grid(12);
+						<pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(0.9375em);
 @include add-gutter-style(split);</code></pre>
 						<img src="images/symmetric-grid-foundation.png" alt="Zurb Foundation Grid" class="fragment medium">
 					</section>
 					<section id="symmetric-grids-pure">
 						<h2>Symmetric Grids - YUI Pure</h2>
-						@include add-grid(12);
+						<pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(0);</code></pre>
 						<img src="images/symmetric-grid-pure.png" alt="YUI Pure Grid" class="fragment medium">
 					</section>
@@ -475,7 +476,7 @@ $breakpoint-no-query-fallbacks: '.no-touch';
 					</section>
 					<section id="asymmetric-grids">
 						<h2>Asymmetric Grid - Custom</h2>
-						@include add-grid(1 4 1);
+						<pre><code class="language-scss">@include add-grid(1 4 1);
 @include add-gutter(1/6);
 @include add-gutter-style(split)</code></pre>
 						<img src="images/asymmetric-grid-custom.png" alt="Custom Asymmetric Grid" class="fragment medium">
@@ -767,16 +768,15 @@ img, video {
 				</section>
 			</section>
 
+			<section id="did-i-mention">
+				<h2>Did I Mention?</h2>
+				<p>Everything you just saw? Yah, it's backend independent. You can use it anywhere, with anything, for any project. Sass Rocks</p>
+			</section>
+
 			<section>
 				<section id="all-together">
 					<video src="videos/alltogether.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' data-autoplay loop></video>
 				</section>
-			</section>
-
-
-			<section id="did-i-mention">
-				<h2>Did I Mention?</h2>
-				<p>Everything you just saw? Yah, it's backend independent. You can use it anywhere, with anything, for any project. Sass Rocks</p>
 			</section>
 
 			<section id="thank-you">
