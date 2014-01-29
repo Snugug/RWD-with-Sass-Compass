@@ -1,5 +1,7 @@
 var counter = document.getElementById('pagecounter');
 
+
+
 // Fires each time a new slide is activated
 Reveal.addEventListener( 'slidechanged', function( e ) {
     // event.previousSlide, event.currentSlide, event.indexh, event.indexv
@@ -29,3 +31,31 @@ Reveal.addEventListener( 'slidechanged', function( e ) {
 
     counter.innerHTML = page + citation;
 } );
+
+
+//////////////////////////////
+// Advance Videos when Ended
+//////////////////////////////
+// var videos = document.getElementsByTagName('video');
+// var videoLength = videos.length;
+
+// for (var i = 0; i < videoLength; i++) {
+//   videos[i].addEventListener('ended', function() {
+//     window.setTimeout(function() {
+//       Reveal.next();
+//     }, 1000);
+//   });
+// }
+
+
+//////////////////////////////
+// Play Audio
+//////////////////////////////
+// Reveal.addEventListener( 'slidechanged', function(e) {
+//   var belong = document.getElementById('belong-song');
+//   if (e.indexh === 2 && e.indexv === 1) {
+//     belong.play();
+//   } else {
+//     belong.pause();
+//   }
+// });
