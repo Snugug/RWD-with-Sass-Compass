@@ -1,0 +1,119 @@
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit";
+@import "toolkit/kickstart";
+
+$inline-nav: 756px;
+$sidebar: 618px;
+
+@include add-grid(.5 8 .5);
+@include add-gutter(.25);
+
+
+@include add-grid(61.8034 9.01699 2.12862 3.44419 23.6068 at $sidebar);
+@include add-gutter(1 at $sidebar);
+
+body {
+  margin: 0;
+  padding: 0;
+
+  // @include background-grid;
+}
+
+header,
+main {
+  max-width: 1088px;
+  margin: 0 auto;
+}
+
+.fluid-video {
+  @include intrinsic-ratio;
+
+  @include breakpoint($sidebar) {
+    @include grid-span(3, 3);
+    @include intrinsic-ratio-ratio(16/9, column-span(3, 3));
+  }
+}
+
+section {
+  @include grid-span(1, 2);
+
+  @include breakpoint($sidebar) {
+    @include grid-span(2, 1);
+  }
+}
+
+header {
+  position: relative;
+}
+
+#toggle {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  background-image: inline-image('menu.svg');
+  background-size: 100%;
+  top: .5em;
+  right: .5em;
+  overflow: hidden;
+  @include hide-text;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include breakpoint($inline-nav) {
+    display: none;
+  }
+}
+
+//////////////////////////////
+// Navigation
+//////////////////////////////
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.5em;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($inline-nav) {
+    margin-left: 2em;
+    display: inline-block;
+  }
+}
+
+@include breakpoint(max-width $inline-nav) {
+  [data-state='open'] ~ ul {
+    display: block;
+  }
+
+  [data-state='closed'] ~ ul {
+    display: none;
+  }
+}
+
+nav {
+  @include breakpoint($inline-nav) {
+    @include grid-span(1, 1);
+  }
+}
+
+header h1 {
+  @include breakpoint($inline-nav) {
+    @include grid-span(3, 3);
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+main {
+  clear: both;
+  @include clearfix;
+}

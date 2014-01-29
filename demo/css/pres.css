@@ -1,0 +1,172 @@
+/* line 1, ../../../../../../usr/local/gems/toolkit-2.0.0.alpha.7/stylesheets/toolkit/_kickstart.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../../../../../usr/local/gems/toolkit-2.0.0.alpha.7/stylesheets/toolkit/_kickstart.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 17, ../sass/pres.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 24, ../sass/pres.scss */
+header,
+main {
+  max-width: 1088px;
+  margin: 0 auto;
+}
+
+/* line 30, ../sass/pres.scss */
+.fluid-video {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+  width: 100%;
+}
+/* line 52, ../../../../../../usr/local/gems/toolkit-2.0.0.alpha.7/stylesheets/toolkit/_intrinsic-ratio.scss */
+.fluid-video > * {
+  display: block;
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 618px) {
+  /* line 30, ../sass/pres.scss */
+  .fluid-video {
+    width: 29.98039%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-top: 16.86397%;
+    width: 29.98039%;
+  }
+}
+
+/* line 39, ../sass/pres.scss */
+section {
+  width: 84.21053%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 7.89474%;
+  clear: none;
+}
+@media (min-width: 618px) {
+  /* line 39, ../sass/pres.scss */
+  section {
+    width: 69.05807%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+
+/* line 47, ../sass/pres.scss */
+header {
+  position: relative;
+}
+
+/* line 51, ../sass/pres.scss */
+#toggle {
+  height: 2em;
+  width: 2em;
+  position: absolute;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTYgMTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxyZWN0IHk9IjEuNjg1IiB3aWR0aD0iMTYiIGhlaWdodD0iMi41MDEiLz4KCTxyZWN0IHk9IjYuNzQ5IiB3aWR0aD0iMTYiIGhlaWdodD0iMi41MDEiLz4KCTxyZWN0IHk9IjExLjgxNCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjIuNTAxIi8+CjwvZz4KPC9zdmc+Cg==');
+  background-size: 100%;
+  top: .5em;
+  right: .5em;
+  overflow: hidden;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  text-transform: capitalize;
+}
+/* line 62, ../sass/pres.scss */
+#toggle:hover {
+  cursor: pointer;
+}
+@media (min-width: 756px) {
+  /* line 51, ../sass/pres.scss */
+  #toggle {
+    display: none;
+  }
+}
+
+/* line 74, ../sass/pres.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5em;
+}
+
+/* line 82, ../sass/pres.scss */
+nav li {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 756px) {
+  /* line 82, ../sass/pres.scss */
+  nav li {
+    margin-left: 2em;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 756px) {
+  /* line 93, ../sass/pres.scss */
+  [data-state='open'] ~ ul {
+    display: block;
+  }
+
+  /* line 97, ../sass/pres.scss */
+  [data-state='closed'] ~ ul {
+    display: none;
+  }
+}
+@media (min-width: 756px) {
+  /* line 102, ../sass/pres.scss */
+  nav {
+    width: 59.42635%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+
+@media (min-width: 756px) {
+  /* line 108, ../sass/pres.scss */
+  header h1 {
+    width: 29.98039%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+/* line 116, ../sass/pres.scss */
+main {
+  clear: both;
+}
+/* line 10, ../../../../../../usr/local/gems/toolkit-2.0.0.alpha.7/stylesheets/toolkit/_clearfix.scss */
+main:after {
+  content: "";
+  display: table;
+  clear: both;
+}

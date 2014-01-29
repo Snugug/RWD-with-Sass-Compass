@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Singularity HTML Demo</title>
+    <link rel="stylesheet" href="css/pres.css">
+  </head>
+  <body>
+    <header>
+      <h1>Snugug</h1>
+      <nav>
+        <div id="toggle" data-state="open">menu</div>
+        <ul>
+          <li>Home</li>
+          <li>Blog</li>
+          <li>Photos</li>
+          <li class="active">Videos</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <div class="fluid-video">
+          <iframe width="560" height="315" src="http://www.youtube.com/embed/lEsPhTbJhuo?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <section>
+          <h1>That Darn Katz!</h1>
+          <p>What's with you kids? Every other day it's food, food, food. Alright, I'll get you some stupid food. Okay, it's 500 dollars, you have no choice of carrier, the battery can't hold the charge and the reception isn't very&hellip; Oh yeah, good luck with that. It doesn't look so shiny to me. I'm Santa Claus!</p>
+          <h2>A Leela of Her Own</h2>
+          <p>I don't 'need' to drink. I can quit anytime I want! Okay, I like a challenge. Ask her how her day was.</p>
+          <ul>
+          <li>With a warning label this big, you know they gotta be fun!</li>
+          <li>Well I'da done better, but it's plum hard pleading a case while awaiting trial for that there incompetence.</li>
+          <li>That's a popular name today. Little "e", big "B"?</li>
+          </ul>
+          <h3>Attack of the Killer App</h3>
+          <p>Calculon is gonna kill us and it's all everybody else's fault! Can I use the gun? I'll get my kit! Large bet on myself in round one.</p>
+          <h4>I, Roommate</h4>
+          <p>Hi, I'm a naughty nurse, and I really need someone to talk to. $9.95 a minute. When the lights go out, it's nobody's business what goes on between two consenting adults. And from now on you're all named Bender Jr. A true inspiration for the children. This is the worst part. The calm before the battle. With a warning label this big, you know they gotta be fun!</p>
+          <ol>
+          <li>Please, Don-Bot&hellip; look into your hard drive, and open your mercy file!</li>
+          <li>And why did 'I' have to take a cab?</li>
+          <li>And remember, don't do anything that affects anything, unless it turns out you were supposed to, in which case, for the love of God, don't not do it!</li>
+          <li>Okay, it's 500 dollars, you have no choice of carrier, the battery can't hold the charge and the reception isn't very&hellip;</li>
+          </ol>
+          <h5>I Dated a Robot</h5>
+          <p>There's no part of that sentence I didn't like! Well I'da done better, but it's plum hard pleading a case while awaiting trial for that there incompetence. When will that be?</p>
+        </section>
+
+      </article>
+    </main>
+
+    <script>
+      var toggle = document.getElementById('toggle');
+      toggle.addEventListener('click', function(e) {
+        var state = this.getAttribute('data-state')
+        if (state === 'closed') {
+          this.setAttribute('data-state', 'open');
+        }
+        else {
+          this.setAttribute('data-state', 'closed');
+        }
+      });
+    </script>
+  </body>
+</html>

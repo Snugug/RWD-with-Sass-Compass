@@ -1,0 +1,29 @@
+@import "breakpoint";
+@import "singularitygs";
+@import "singularity-extras/outputs";
+
+@include add-grid(320px 1 2);
+@include add-gutter(1em);
+@include sgs-change('output', 'calc');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  background: #e8b38e;
+  height: 100vh;
+}
+
+.one {
+  @include grid-span(1, 1);
+}
+
+.two {
+  @include grid-span(1, 2);
+}
+
+.three {
+  @include grid-span(1, 3);
+}
