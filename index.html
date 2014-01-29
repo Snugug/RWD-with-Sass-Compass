@@ -69,6 +69,9 @@
 					<section id="experiment-commence">
 						<p>Lower it if you have the exact same phone (make, model, carrier, and OS version) as your neighbors</p>
 					</section>
+					<section id="experiment-contine">
+						<p>Lower it if you <strong>only</strong> use your phone while you're distracted, on the go, and want a dumbed-down experience.</p>
+					</section>
 					<section id="experiment-finale" data-state="experiment">
 						<a href="http://knowyourmeme.com/memes/thats-racist"><img src="images/thats-racist.gif" alt="That's Devicest"/></a>
 					</section>
@@ -156,7 +159,7 @@
 				<section id="extension-basics">
 					<h2>Using Compass Extensions</h2>
 
-					<pre class="fragment"><code class="language-scss">> gem install {extension}</code></pre>
+					<pre class="fragment"><code class="language-scss">gem 'extension', '~>X.Y.Z'</code></pre>
 
 					<pre class="fragment"><code class="language-scss">require '{extension}'</code></pre>
 
@@ -179,7 +182,7 @@
 				<section id="breakpoint">
 					<h2><a href="https://github.com/team-sass/breakpoint">Breakpoint</a></h2>
 
-					<pre class="fragment"><code class="language-scss">> gem install breakpoint</code></pre>
+					<pre class="fragment"><code class="language-scss">gem 'breakpoint', '~>2.4.0'</code></pre>
 
 					<pre class="fragment"><code class="language-scss">require 'breakpoint'</code></pre>
 
@@ -421,42 +424,95 @@ $breakpoint-no-query-fallbacks: '.no-touch';
 				<section id="singularity">
 					<h2><a href="https://github.com/team-sass/singularity">Singularity</a></h2>
 
-					<pre class="fragment"><code class="language-scss">> gem install singularitygs</code></pre>
+					<pre class="fragment"><code class="language-scss">gem 'singularitygs', '~>1.2.0.rc.3'</code></pre>
 
 					<pre class="fragment"><code class="language-scss">require 'singularitygs'</code></pre>
 
 					<pre class="fragment"><code class="language-scss">@import 'singularitygs';</code></pre>
 				</section>
+				<section>
+					<section data-state="bootstrap" id="bootstrap-grid">
+						<h1>Twitter Bootstrap</h1>
+					</section>
+					<section data-state="foundation" id="foundation-grid">
+						<h1>Zurb Foundation</h1>
+					</section>
+					<section data-state="pure" id="pure-grid">
+						<h1>YUI Pure</h1>
+					</section>
+					<section data-state="all-the-grids" id="all-grids" data-source="http://canarymason.github.io/managing-rwd-presentation/#/web-grids" data-cite="Mason Wendell">
+						<h1>All The Grids Are All The Same!</h1>
+					</section>
+				</section>
 			<section>
-				<section id="symmetric-grids-code">
-					<h2>Symmetric Grids</h2>
-
-					<pre><code class="language-scss">// Symmetric grids are expressed as a single number denoting how many equal sized columns you'd like.
-
-$grids: 12;
-$gutters: 1/3;</code></pre>
+					<section id="boring-grids">
+						<h1>Boring Grids</h1>
+					</section>
+					<section id="symmetric-grids-bootstrap">
+						<h2>Symmetric Grids - Twitter Bootstrap</h2>
+						@include add-grid(12);
+@include add-gutter(1/3);</code></pre>
+						<img src="images/symmetric-grid-bootstrap.png" alt="Twitter Bootstrap Grid" class="fragment medium">
+					</section>
+					<section id="symmetric-grids-foundation">
+						<h2>Symmetric Grids - Zurb Foundation</h2>
+						@include add-grid(12);
+@include add-gutter(0.9375em);
+@include add-gutter-style(split);</code></pre>
+						<img src="images/symmetric-grid-foundation.png" alt="Zurb Foundation Grid" class="fragment medium">
+					</section>
+					<section id="symmetric-grids-pure">
+						<h2>Symmetric Grids - YUI Pure</h2>
+						@include add-grid(12);
+@include add-gutter(0);</code></pre>
+						<img src="images/symmetric-grid-pure.png" alt="YUI Pure Grid" class="fragment medium">
+					</section>
 				</section>
-				<section id="symmetric-grids-image">
-					<h2>Symmetric Grids</h2>
 
-					<img src="images/symmetric.png" alt="Symmetric Grid">
+				<section>
+					<section id="interesting-grids">
+						<h1>Interesting Grids</h1>
+					</section>
+					<section id="asymmetric-grids">
+						<h2>Asymmetric Grid - Custom</h2>
+						@include add-grid(1 4 1);
+@include add-gutter(1/6);
+@include add-gutter-style(split)</code></pre>
+						<img src="images/asymmetric-grid-custom.png" alt="Custom Asymmetric Grid" class="fragment medium">
+					</section>
+					<section id="asymmetric-grids-compound">
+						<h2>Asymmetric Grid - Compound</h2>
+						<pre><code class="language-scss">// Compound function comes from [Singularity Extras](https://github.com/Team-Sass/Singularity-extras)
+@include add-grid(compound(3, 4));
+@include add-gutter(1);</code></pre>
+						<img src="images/asymmetric-grid-compound.png" alt="Compound Asymmetric Grid" class="fragment medium">
+					</section>
+					<section id="asymmetric-grids-ratio">
+						<h2>Asymmetric Grid - Ratio Based</h2>
+						<pre><code class="language-scss">// Ratio function comes from [Singularity Extras](https://github.com/Team-Sass/Singularity-extras)
+@include add-grid(ratio(golden-ratio(), 4));
+@include add-gutter(golden-ratio() * 1em);
+@include add-gutter-style(split);</code></pre>
+						<img src="images/asymmetric-grid-ratio.png" alt="Ratio Asymmetric Grid" class="fragment medium">
+					</section>
+					<section id="asymmetric-grids-spiral">
+						<h2>Asymmetric Grid - Spiral Based</h2>
+						<pre><code class="language-scss">// Ratio spiral function comes from [Singularity Extras](https://github.com/Team-Sass/Singularity-extras)
+@include add-grid(ratio-spiral(5));
+@include add-gutter(1);</code></pre>
+						<img src="images/asymmetric-grid-spiral.png" alt="Ratio Spiral Asymmetric Grid" class="fragment medium">
+					</section>
+					<section id="asymmetric-grids-mixed-fixed-fluid">
+						<h2>Asymmetric Grid - Mixed Fixed and Fluid Grids</h2>
+						<pre><code class="language-scss">// Calc output style comes from [Singularity Extras](https://github.com/Team-Sass/Singularity-extras)
+@include add-grid(320px 1 2);
+@include add-gutter(1em);
+@include sgs-change('output', 'calc');</code></pre>
+						<video src="videos/calc.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' data-autoplay loop></video>
+					</section>
 				</section>
 
-				<section id="asymmetric-grids-code">
-					<h2>Asymmetric Grids</h2>
-
-					<pre><code class="language-scss">// Asymmetric grids are expressed as a list of number denoting the relative sizes of each column to each other.
-
-$grids: 2 8 2;
-$gutters: 1/3;</code></pre>
-				</section>
-
-				<section id="asymmetric-grids-image">
-					<h2>Asymmetric Grids</h2>
-
-					<img src="images/asymmetric.png" alt="Symmetric Grid">
-				</section>
-			</section>
+			<section data-state="minions"></section>
 
 			<section>
 				<section id="semantic-grid">
@@ -477,8 +533,8 @@ $gutters: 1/3;</code></pre>
 
 					<pre><code class="language-scss">// Simply pass the number of columns you'd like to span and what column you'd like to start from.
 
-$grids: 2 8 2;
-$gutters: 1/3;
+@include add-grid(2 8 2);
+@include add-gutter(1/3);
 
 .first {
   @include grid-span(1, 1);
@@ -504,9 +560,9 @@ $gutters: 1/3;
 
 					<pre><code class="language-scss">// add-grid allows you to automatically change your global Grid Context at various breakpoints
 
-$grids: 12;
-$grids: add-grid(2 8 2 at 700px);
-$gutters: 1/3;
+@include add-grid(12);
+@include add-grid(2 8 2 at 700px);
+@include add-gutter(1/3);
 
 .first {
   @include grid-span(3, 4);
@@ -535,7 +591,7 @@ $gutters: 1/3;
 				<section id="responsive-grids-display">
 					<h2>Responsive Grid Context - Display</h2>
 
-					<video src="videos/rwd-grid-context.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' autoplay loop></video>
+					<video src="videos/rwd-grid-context.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' data-autoplay loop></video>
 				</section>
 			</section>
 			<section>
@@ -560,8 +616,8 @@ $gutters: 1/3;
 				<section id="nested-grid-outer-scss">
 					<h2>Nested Grids (Outer Grid) - Sass</h2>
 
-					<pre><code class="language-scss">$grids: 2 8 2;
-$gutters: 1/3;
+					<pre><code class="language-scss">@include add-grid(2 8 2);
+@include add-gutter(1/3);
 
 .first {
   @include grid-span(1, 1);
@@ -637,7 +693,7 @@ $gutters: 1/3;
 			<section id="toolkit">
 				<h2><a href="https://github.com/team-sass/toolkit">Toolkit</a></h2>
 
-				<pre class="fragment"><code class="language-scss">> gem install toolkit</code></pre>
+				<pre class="fragment"><code class="language-scss">gem 'toolkit', '~>2.0.0.alpha.7'</code></pre>
 
 				<pre class="fragment"><code class="language-scss">require 'toolkit'</code></pre>
 
@@ -707,9 +763,16 @@ img, video {
 				<section id="intrinsic-ratios-display">
 					<h2>Intrinsic Ratios - Display</h2>
 
-					<video src="videos/irs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' controls></video>
+					<video src="videos/irs.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' data-autoplay></video>
 				</section>
 			</section>
+
+			<section>
+				<section id="all-together">
+					<video src="videos/alltogether.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' data-autoplay loop></video>
+				</section>
+			</section>
+
 
 			<section id="did-i-mention">
 				<h2>Did I Mention?</h2>
