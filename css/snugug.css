@@ -15,7 +15,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .bootstrap .state-background,
 .foundation .state-background,
 .pure .state-background,
-.minions .state-background {
+.minions .state-background,
+.beaker .state-background {
   background-position: center;
   background-size: cover;
 }
@@ -46,6 +47,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 .minions .state-background {
   background-image: url('../images/happy-minions.gif');
+}
+
+.beaker .state-background {
+  background-image: url('../images/beaker-freak.gif');
 }
 
 strong.lowercase{text-transform:none;font-size:1.25em}
